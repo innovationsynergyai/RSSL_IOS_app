@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Rising Sun Sober Living Portal",
+    "slug": "rising-sun-portal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "privacy": "public",
+    "platforms": ["ios", "android"],
+    "description": "Official mobile portal for Rising Sun Sober Living - Access forms, resources, and community support.",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.risingsun.portal",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "jotform.com": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSExceptionMinimumTLSVersion": "1.0",
+              "NSIncludesSubdomains": true
+            },
+            "hipaa.jotform.com": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSExceptionMinimumTLSVersion": "1.0",
+              "NSIncludesSubdomains": true
+            }
+          }
+        },
+        "NSCameraUsageDescription": "This app needs access to camera to upload photos and documents.",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone for voice recordings and calls.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location for location-based services."
+      }
+    },
+    "android": {
+      "package": "com.risingsun.portal",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "name": "Rising Sun Portal",
+      "shortName": "RS Portal",
+      "lang": "en",
+      "scope": "/",
+      "themeColor": "#ffffff",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "rising-sun-portal"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "rising-sun-portal",
+  "displayName": "Rising Sun Sober Living Portal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Official mobile portal for Rising Sun Sober Living - Access forms, resources, and community support.",
+  "author": "Rising Sun Sober Living",
+  "license": "MIT",
+  "scripts": {
+    "start": "expo start",
+    "start:prod": "expo start --no-dev --minify",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build:ios": "expo build:ios",
+    "build:android": "expo build:android",
+    "publish": "expo publish",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "expo": "~53.0.22",
+    "expo-status-bar": "~2.2.3",
+    "react": "19.0.0",
+    "react-native": "^0.79.5",
+    "react-native-safe-area-context": "^5.4.0",
+    "react-native-webview": "^13.13.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "keywords": [
+    "sober living",
+    "rising sun",
+    "recovery",
+    "mobile app",
+    "jotform",
+    "portal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/risingsun/portal-app.git"
+  },
+  "private": true
+}
