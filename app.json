@@ -8,7 +8,10 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "privacy": "public",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "description": "Official mobile portal for Rising Sun Sober Living - Access forms, resources, and community support.",
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -21,26 +24,38 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.risingsun.portal",
-      "buildNumber": "1.0.0",
+      "buildNumber": "1",
+      "requireFullScreen": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
       "infoPlist": {
+        "CFBundleDisplayName": "Rising Sun Portal",
+        "CFBundleShortVersionString": "1.0.0",
+        "CFBundleVersion": "1",
+        "ITSAppUsesNonExemptEncryption": false,
         "NSAppTransportSecurity": {
-          "NSAllowsArbitraryLoads": true,
+          "NSAllowsArbitraryLoads": false,
           "NSExceptionDomains": {
             "jotform.com": {
-              "NSExceptionAllowsInsecureHTTPLoads": true,
-              "NSExceptionMinimumTLSVersion": "1.0",
-              "NSIncludesSubdomains": true
+              "NSExceptionAllowsInsecureHTTPLoads": false,
+              "NSExceptionMinimumTLSVersion": "1.2",
+              "NSIncludesSubdomains": true,
+              "NSExceptionRequiresForwardSecrecy": false
             },
             "hipaa.jotform.com": {
-              "NSExceptionAllowsInsecureHTTPLoads": true,
-              "NSExceptionMinimumTLSVersion": "1.0",
-              "NSIncludesSubdomains": true
+              "NSExceptionAllowsInsecureHTTPLoads": false,
+              "NSExceptionMinimumTLSVersion": "1.2",
+              "NSIncludesSubdomains": true,
+              "NSExceptionRequiresForwardSecrecy": false
             }
           }
         },
-        "NSCameraUsageDescription": "This app needs access to camera to upload photos and documents.",
-        "NSMicrophoneUsageDescription": "This app needs access to microphone for voice recordings and calls.",
-        "NSLocationWhenInUseUsageDescription": "This app needs access to location for location-based services."
+        "NSCameraUsageDescription": "Rising Sun Portal needs camera access to capture photos and documents for forms and verification purposes.",
+        "NSMicrophoneUsageDescription": "Rising Sun Portal needs microphone access for voice recordings and video calls with counselors.",
+        "NSLocationWhenInUseUsageDescription": "Rising Sun Portal needs location access to provide location-based services and emergency assistance.",
+        "NSPhotoLibraryUsageDescription": "Rising Sun Portal needs photo library access to select photos for forms and documents.",
+        "NSFaceIDUsageDescription": "Rising Sun Portal uses Face ID for secure authentication and data protection."
       }
     },
     "android": {
@@ -71,8 +86,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "rising-sun-portal"
+        "projectId": "0e9aa5e8-49eb-41f5-8d62-2783db83a90d"
       }
-    }
+    },
+    "owner": "northeastnoir"
   }
 }

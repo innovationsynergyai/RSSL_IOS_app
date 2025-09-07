@@ -1,0 +1,60 @@
+{
+  "cli": {
+    "version": ">= 5.6.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium",
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium",
+        "simulator": false
+      }
+    },
+    "production": {
+      "distribution": "store",
+      "autoIncrement": true,
+      "ios": {
+        "resourceClass": "m-medium",
+        "simulator": false,
+        "buildConfiguration": "Release"
+      }
+    },
+    "testflight": {
+      "distribution": "store",
+      "autoIncrement": true,
+      "ios": {
+        "resourceClass": "m-medium",
+        "simulator": false,
+        "buildConfiguration": "Release",
+        "enterpriseProvisioning": "universal"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "bundleIdentifier": "com.risingsun.portal",
+        "appleId": "northeastnoir@gmail.com",
+        "ascAppId": "placeholder",
+        "appleTeamId": "placeholder"
+      }
+    },
+    "testflight": {
+      "ios": {
+        "bundleIdentifier": "com.risingsun.portal",
+        "appleId": "northeastnoir@gmail.com",
+        "ascAppId": "placeholder",
+        "appleTeamId": "placeholder"
+      }
+    }
+  }
+}
